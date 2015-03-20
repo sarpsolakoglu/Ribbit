@@ -10,6 +10,8 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (nonatomic, assign) BOOL needRefresh;
+
 @property (strong, nonatomic) UIWindow *window;
 
 

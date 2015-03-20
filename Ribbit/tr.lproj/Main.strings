@@ -1,0 +1,72 @@
+
+/* Class = "IBUITextField"; placeholder = "Şifre"; ObjectID = "4Hl-dO-yLt"; */
+"4Hl-dO-yLt.placeholder" = "Şifre";
+
+/* Class = "IBUILabel"; text = "Başlık"; ObjectID = "7Ea-us-D5T"; */
+"7Ea-us-D5T.text" = "Başlık";
+
+/* Class = "IBUITextField"; placeholder = "Şifre"; ObjectID = "7Vz-GO-6GG"; */
+"7Vz-GO-6GG.placeholder" = "Şifre";
+
+/* Class = "IBUILabel"; text = "Hesabınız yok mu? "; ObjectID = "8UO-mu-caV"; */
+"8UO-mu-caV.text" = "Hesabınız yok mu? ";
+
+/* Class = "IBUILabel"; text = "Başlık"; ObjectID = "8lD-vi-1X5"; */
+"8lD-vi-1X5.text" = "Başlık";
+
+/* Class = "IBUITextField"; placeholder = "Mail Adresi"; ObjectID = "GVp-yc-8D8"; */
+"GVp-yc-8D8.placeholder" = "Mail Adresi";
+
+/* Class = "IBUITabBarItem"; title = "Gelen Kutusu"; ObjectID = "GwS-pl-YYS"; */
+"GwS-pl-YYS.title" = "Gelen Kutusu";
+
+/* Class = "IBUINavigationItem"; title = "Arkadaşlar"; ObjectID = "MDi-mZ-1Kj"; */
+"MDi-mZ-1Kj.title" = "Arkadaşlar";
+
+/* Class = "IBUITabBarItem"; title = "Kamera"; ObjectID = "NoK-kU-R9h"; */
+"NoK-kU-R9h.title" = "Kamera";
+
+/* Class = "IBUINavigationItem"; title = "Arkadaş Ekle"; ObjectID = "Rcp-s3-Did"; */
+"Rcp-s3-Did.title" = "Arkadaş Ekle";
+
+/* Class = "IBUITextField"; placeholder = "Kullanıcı Adı"; ObjectID = "Vae-T5-nJb"; */
+"Vae-T5-nJb.placeholder" = "Kullanıcı Adı";
+
+/* Class = "IBUIBarButtonItem"; title = "Gönder"; ObjectID = "aJh-7H-0dz"; */
+"aJh-7H-0dz.title" = "Gönder";
+
+/* Class = "IBUINavigationItem"; title = "Alıcılar"; ObjectID = "bhL-LS-L7I"; */
+"bhL-LS-L7I.title" = "Alıcılar";
+
+/* Class = "IBUITabBarItem"; title = "Arkadaşlar"; ObjectID = "cjm-5j-RHY"; */
+"cjm-5j-RHY.title" = "Arkadaşlar";
+
+/* Class = "IBUINavigationItem"; title = "Gelen Kutusu"; ObjectID = "fMu-Qu-uNa"; */
+"fMu-Qu-uNa.title" = "Gelen Kutusu";
+
+/* Class = "IBUIButton"; normalTitle = "Üyel Ol"; ObjectID = "gs7-uV-1hs"; */
+"gs7-uV-1hs.normalTitle" = "Üyel ol";
+
+/* Class = "IBUILabel"; text = "Başlık"; ObjectID = "mRY-OD-eXA"; */
+"mRY-OD-eXA.text" = "Başlık";
+
+/* Class = "IBUITableViewController"; title = "Arkadaşlar"; ObjectID = "pgA-KW-eb9"; */
+"pgA-KW-eb9.title" = "Arkadaşlar";
+
+/* Class = "IBUINavigationItem"; title = "Giriş yap"; ObjectID = "stT-ob-oB1"; */
+"stT-ob-oB1.title" = "Giriş yap";
+
+/* Class = "IBUIBarButtonItem"; title = "Çıkış yap"; ObjectID = "tsW-RZ-y1V"; */
+"tsW-RZ-y1V.title" = "Çıkış yap";
+
+/* Class = "IBUIButton"; normalTitle = "Giriş yap"; ObjectID = "uBB-VF-Xla"; */
+"uBB-VF-Xla.normalTitle" = "Giriş yap";
+
+/* Class = "IBUITextField"; placeholder = "Kullanıcı adı"; ObjectID = "wAY-UD-azN"; */
+"wAY-UD-azN.placeholder" = "Kullanıcı adı";
+
+/* Class = "IBUIButton"; normalTitle = "Üyel ol"; ObjectID = "ywt-vw-gpy"; */
+"ywt-vw-gpy.normalTitle" = "Üyel ol";
+
+/* Class = "IBUITableViewController"; title = "Gelen Kutusu"; ObjectID = "zHs-yb-hly"; */
+"zHs-yb-hly.title" = "Gelen Kutusu";
