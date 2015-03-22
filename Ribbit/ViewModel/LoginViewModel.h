@@ -13,9 +13,9 @@
 
 @interface LoginViewModel : NSObject <ViewModel>
 
-@property(nonatomic,strong) NSString *username;
-@property(nonatomic,strong) NSString *password;
-@property(nonatomic,strong) NSString *title;
+@property(nonatomic,copy) NSString *username;
+@property(nonatomic,copy) NSString *password;
+@property(nonatomic,copy) NSString *title;
 @property(nonatomic,strong) RACCommand *loginCommand;
 
 @end

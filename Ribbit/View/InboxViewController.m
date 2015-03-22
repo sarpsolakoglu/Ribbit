@@ -11,97 +11,83 @@
 #import <Parse/Parse.h>
 #import "ImageViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "InboxViewModel.h"
+#import "InboxCellViewModel.h"
+#import "CETableViewBindingHelper.h"
 
 @interface InboxViewController ()
-@property (nonatomic,strong) NSArray *messages;
+
 @property (nonatomic,strong) MPMoviePlayerController *moviePlayer;
+@property (nonatomic,strong) InboxViewModel *viewModel;
+@property (strong, nonatomic) CETableViewBindingHelper *bindingHelper;
+
 @end
 
 @implementation InboxViewController
 
+-(instancetype)initWithViewModel:(id<ViewModel>)viewModel {
+    if (self = [super init]) {
+        _viewModel = viewModel;
+    }
+    return self;
+}
+
+-(instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        _viewModel = [InboxViewModel new];
+    }
+    return self;
+}
+
+- (void) bindViewModel {
+    //bind the tableview to it's tableviewcell model. tableviewcell models are stored as an array inside the viewmodel of this
+    //view controller
+    
+    self.bindingHelper = [CETableViewBindingHelper bindingHelperForTableView:self.tableView
+                                                                sourceSignal:RACObserve(self.viewModel, messages) selectionCommand:self.viewModel.cellSelected reuseIdentifier:@"inboxCell"
+                                                                    templateCell:nil];
+    self.bindingHelper.delegate = self;
+    
+    //Command execution error
+    [[self.viewModel.getInboxCommand.errors
+      deliverOn:[RACScheduler mainThreadScheduler]]
+     subscribeNext:^(NSError *error) {
+         NSString *errorString = [error userInfo][@"error"];
+         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"") message:errorString delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil];
+         [alertView show];
+     }];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self bindViewModel];
     self.moviePlayer = [MPMoviePlayerController new];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     PFUser *currentUser = [PFUser currentUser];
-    
+    //UI Related Navigation
     if (!currentUser) {
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     } else {
-        PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
-        [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
-        [query orderByAscending:@"createdAt"];
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if (!error) {
-                self.messages = objects;
-                [self.tableView reloadData];
-            } else {
-                NSString *errorString = [error userInfo][@"error"];
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                [alertView show];
-            }
-        }];
+        [self.viewModel.getInboxCommand execute:nil];
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return _messages.count;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"inboxCell" forIndexPath:indexPath];
-    
-    PFObject *message = [_messages objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = [message objectForKey:@"senderName"];
-    
-    NSString *fileType = [message objectForKey:@"fileType"];
-    
-    if ([fileType isEqualToString:@"image"]) {
-        cell.imageView.image = [UIImage imageNamed:@"icon_image"];
-    } else if ([fileType isEqualToString:@"video"]){
-        cell.imageView.image = [UIImage imageNamed:@"icon_video"];
-    }
-    // Configure the cell...
-    
-    return cell;
-}
+/*
+ *Table view related stuff is handled by the binding done with CETableViewBindingHelper
+ *
+ */
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    PFObject *message = _messages[indexPath.row];
+    InboxCellViewModel *cellViewModel = self.viewModel.messages[indexPath.row];
+    PFObject *message = cellViewModel.message;
     NSString *fileType = [message objectForKey:@"fileType"];
-    
-    NSMutableArray *recipients = [NSMutableArray arrayWithArray:[message objectForKey:@"recipientIds"]];
-    
-    if (recipients.count == 1) {
-        [message deleteInBackground];
-    } else {
-        [recipients removeObject:[[PFUser currentUser] objectId]];
-        [message setObject:recipients forKey:@"recipientIds"];
-        
-        [message saveInBackground];
-    }
-    
-    
+  
+    //NON-UI related stuff done in the ViewModel and with the help of CEBTableViewBindingHelper
+    //But I could not figure out what to do with the UI related stuff so I didn't move them.
     if ([fileType isEqualToString:@"image"]) {
         [self performSegueWithIdentifier:@"showImage" sender:message];
     } else {
@@ -118,10 +104,8 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+//Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    
     if ([segue.identifier isEqualToString:@"showImage"]) {
         [[segue destinationViewController] setHidesBottomBarWhenPushed:YES];
         if ([[segue destinationViewController] isKindOfClass:[ImageViewController class]]) {
@@ -130,11 +114,9 @@
     }
 }
 
-
+//UI Related
 - (IBAction)logOut:(id)sender {
-    
     ((AppDelegate*)[[UIApplication sharedApplication] delegate]).needRefresh = YES;
-    
     if ([PFUser currentUser]) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [PFUser logOut];

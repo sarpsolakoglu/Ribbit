@@ -12,4 +12,5 @@
 @interface ParseService : NSObject
 -(RACSignal*)loginCallWithUsername:(NSString*)username andPassword:(NSString*)password;
 -(RACSignal*)signUpCallWithUsername:(NSString*)username password:(NSString*)password andEmail:(NSString*)email;
+-(RACSignal*)getInbox;
 @end

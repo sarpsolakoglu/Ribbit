@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390F06C01ABF29DC00449329 /* InboxViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 390F06BF1ABF29DC00449329 /* InboxViewCell.m */; };
+		390F06C31ABF2A6000449329 /* InboxCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 390F06C21ABF2A6000449329 /* InboxCellViewModel.m */; };
+		390F06C81ABF2F6C00449329 /* CETableViewBindingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 390F06C71ABF2F6C00449329 /* CETableViewBindingHelper.m */; };
+		391477C71ABF103500E3A24D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391477C61ABF103500E3A24D /* Parse.framework */; };
+		391477C91ABF104000E3A24D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391477C81ABF104000E3A24D /* Bolts.framework */; };
+		391477CD1ABF17D000E3A24D /* InboxViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 391477CC1ABF17D000E3A24D /* InboxViewModel.m */; };
 		5A8EA2A103791E6AA0EB005D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 915682AE43233C0A98485C38 /* libPods.a */; };
 		E90575341A841EBA00797319 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90575331A841EBA00797319 /* MediaPlayer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E906D36F1A83A2D900F9B079 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E906D36E1A83A2D900F9B079 /* LaunchScreen.xib */; };
 		E91E669D1A9488CB007FE969 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E959C8C61A821E47002DE2C5 /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E91E669F1A9488DB007FE969 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91E669E1A9488DB007FE969 /* AddressBook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		E959C8C11A821CBA002DE2C5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E959C8C01A821CBA002DE2C5 /* Parse.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E959C8C31A821E38002DE2C5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E959C8C21A821E38002DE2C5 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E959C8C51A821E40002DE2C5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E959C8C41A821E40002DE2C5 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E959C8C91A821E51002DE2C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E959C8C81A821E51002DE2C5 /* CoreLocation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -22,7 +27,6 @@
 		E959C8D31A821E7A002DE2C5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E959C8D21A821E7A002DE2C5 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E959C8D51A821E84002DE2C5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E959C8D41A821E83002DE2C5 /* libz.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E959C8D71A821E8F002DE2C5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E959C8D61A821E8F002DE2C5 /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
-		E959C8D91A8220AA002DE2C5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E959C8D81A8220AA002DE2C5 /* Bolts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E96DBBEC1A80CE5100E7D861 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E96DBBEB1A80CE5100E7D861 /* main.m */; };
 		E96DBBEF1A80CE5100E7D861 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E96DBBEE1A80CE5100E7D861 /* AppDelegate.m */; };
 		E96DBBF81A80CE5100E7D861 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96DBBF61A80CE5100E7D861 /* Main.storyboard */; };
@@ -57,12 +61,22 @@
 
 /* Begin PBXFileReference section */
 		0E0345FFF1E8933739171D3F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		390F06BE1ABF29DC00449329 /* InboxViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InboxViewCell.h; path = View/InboxViewCell.h; sourceTree = "<group>"; };
+		390F06BF1ABF29DC00449329 /* InboxViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InboxViewCell.m; path = View/InboxViewCell.m; sourceTree = "<group>"; };
+		390F06C11ABF2A6000449329 /* InboxCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InboxCellViewModel.h; path = ViewModel/InboxCellViewModel.h; sourceTree = "<group>"; };
+		390F06C21ABF2A6000449329 /* InboxCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InboxCellViewModel.m; path = ViewModel/InboxCellViewModel.m; sourceTree = "<group>"; };
+		390F06C51ABF2F6C00449329 /* CEReactiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEReactiveView.h; sourceTree = "<group>"; };
+		390F06C61ABF2F6C00449329 /* CETableViewBindingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETableViewBindingHelper.h; sourceTree = "<group>"; };
+		390F06C71ABF2F6C00449329 /* CETableViewBindingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETableViewBindingHelper.m; sourceTree = "<group>"; };
+		391477C61ABF103500E3A24D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Ribbit/Parse.framework; sourceTree = "<group>"; };
+		391477C81ABF104000E3A24D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Ribbit/Bolts.framework; sourceTree = "<group>"; };
+		391477CB1ABF17D000E3A24D /* InboxViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InboxViewModel.h; path = ViewModel/InboxViewModel.h; sourceTree = "<group>"; };
+		391477CC1ABF17D000E3A24D /* InboxViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InboxViewModel.m; path = ViewModel/InboxViewModel.m; sourceTree = "<group>"; };
 		915682AE43233C0A98485C38 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2336857E6336AFB044BDDD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E90575331A841EBA00797319 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		E906D36E1A83A2D900F9B079 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		E91E669E1A9488DB007FE969 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		E959C8C01A821CBA002DE2C5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		E959C8C21A821E38002DE2C5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E959C8C41A821E40002DE2C5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E959C8C61A821E47002DE2C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,7 +87,6 @@
 		E959C8D21A821E7A002DE2C5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E959C8D41A821E83002DE2C5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E959C8D61A821E8F002DE2C5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		E959C8D81A8220AA002DE2C5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		E96DBBE61A80CE5100E7D861 /* Ribbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96DBBEA1A80CE5100E7D861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E96DBBEB1A80CE5100E7D861 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -108,7 +121,6 @@
 		E9F69C3D1ABC524A00C9DC20 /* ParseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseService.h; path = Services/ParseService.h; sourceTree = "<group>"; };
 		E9F69C3E1ABC524A00C9DC20 /* ParseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseService.m; path = Services/ParseService.m; sourceTree = "<group>"; };
 		E9F69C401ABC628F00C9DC20 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		E9F69C421ABC629900C9DC20 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		E9F69C441ABC62BF00C9DC20 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		E9F69C4A1ABC75F200C9DC20 /* SignUpViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpViewModel.h; path = ViewModel/SignUpViewModel.h; sourceTree = "<group>"; };
 		E9F69C4B1ABC75F200C9DC20 /* SignUpViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewModel.m; path = ViewModel/SignUpViewModel.m; sourceTree = "<group>"; };
@@ -128,16 +140,16 @@
 				E91E669D1A9488CB007FE969 /* CoreGraphics.framework in Frameworks */,
 				E90575341A841EBA00797319 /* MediaPlayer.framework in Frameworks */,
 				E959C8D71A821E8F002DE2C5 /* libsqlite3.dylib in Frameworks */,
+				391477C71ABF103500E3A24D /* Parse.framework in Frameworks */,
 				E959C8D51A821E84002DE2C5 /* libz.dylib in Frameworks */,
 				E959C8D31A821E7A002DE2C5 /* SystemConfiguration.framework in Frameworks */,
 				E959C8CF1A821E69002DE2C5 /* Security.framework in Frameworks */,
 				E959C8CD1A821E63002DE2C5 /* QuartzCore.framework in Frameworks */,
 				E959C8CB1A821E5A002DE2C5 /* MobileCoreServices.framework in Frameworks */,
-				E959C8D91A8220AA002DE2C5 /* Bolts.framework in Frameworks */,
+				391477C91ABF104000E3A24D /* Bolts.framework in Frameworks */,
 				E959C8C91A821E51002DE2C5 /* CoreLocation.framework in Frameworks */,
 				E959C8C51A821E40002DE2C5 /* CFNetwork.framework in Frameworks */,
 				E959C8C31A821E38002DE2C5 /* AudioToolbox.framework in Frameworks */,
-				E959C8C11A821CBA002DE2C5 /* Parse.framework in Frameworks */,
 				5A8EA2A103791E6AA0EB005D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,17 +167,8 @@
 		1077A996B40FA6044416C7C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E9F69C441ABC62BF00C9DC20 /* Social.framework */,
-				E9F69C421ABC629900C9DC20 /* Twitter.framework */,
-				E9F69C401ABC628F00C9DC20 /* Accounts.framework */,
-				915682AE43233C0A98485C38 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E959C8BF1A821C71002DE2C5 /* Framework */ = {
-			isa = PBXGroup;
-			children = (
+				391477C81ABF104000E3A24D /* Bolts.framework */,
+				391477C61ABF103500E3A24D /* Parse.framework */,
 				E91E669E1A9488DB007FE969 /* AddressBook.framework */,
 				E90575331A841EBA00797319 /* MediaPlayer.framework */,
 				E959C8D61A821E8F002DE2C5 /* libsqlite3.dylib */,
@@ -178,10 +181,32 @@
 				E959C8C61A821E47002DE2C5 /* CoreGraphics.framework */,
 				E959C8C41A821E40002DE2C5 /* CFNetwork.framework */,
 				E959C8C21A821E38002DE2C5 /* AudioToolbox.framework */,
-				E959C8D81A8220AA002DE2C5 /* Bolts.framework */,
-				E959C8C01A821CBA002DE2C5 /* Parse.framework */,
+				E9F69C441ABC62BF00C9DC20 /* Social.framework */,
+				E9F69C401ABC628F00C9DC20 /* Accounts.framework */,
+				915682AE43233C0A98485C38 /* libPods.a */,
 			);
-			name = Framework;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		390F06C41ABF2F6200449329 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				390F06C51ABF2F6C00449329 /* CEReactiveView.h */,
+				390F06C61ABF2F6C00449329 /* CETableViewBindingHelper.h */,
+				390F06C71ABF2F6C00449329 /* CETableViewBindingHelper.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		391477CA1ABF17B500E3A24D /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				391477CB1ABF17D000E3A24D /* InboxViewModel.h */,
+				391477CC1ABF17D000E3A24D /* InboxViewModel.m */,
+				390F06C11ABF2A6000449329 /* InboxCellViewModel.h */,
+				390F06C21ABF2A6000449329 /* InboxCellViewModel.m */,
+			);
+			name = Inbox;
 			sourceTree = "<group>";
 		};
 		E96DBBDD1A80CE5100E7D861 = {
@@ -209,11 +234,11 @@
 		E96DBBE81A80CE5100E7D861 /* Ribbit */ = {
 			isa = PBXGroup;
 			children = (
+				390F06C41ABF2F6200449329 /* Utils */,
 				E9F69C111ABC170600C9DC20 /* Model */,
 				E9F69C101ABC16FD00C9DC20 /* Services */,
 				E9F69C0F1ABC16F600C9DC20 /* ViewModel */,
 				E9F69C0E1ABC16F000C9DC20 /* View */,
-				E959C8BF1A821C71002DE2C5 /* Framework */,
 				E96DBBED1A80CE5100E7D861 /* AppDelegate.h */,
 				E96DBBEE1A80CE5100E7D861 /* AppDelegate.m */,
 				E96DBBF61A80CE5100E7D861 /* Main.storyboard */,
@@ -268,9 +293,10 @@
 		E9F69C0F1ABC16F600C9DC20 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E9F69C371ABC477900C9DC20 /* ViewModel.h */,
+				391477CA1ABF17B500E3A24D /* Inbox */,
 				E9F69C361ABC46FA00C9DC20 /* Login */,
 				E9F69C461ABC75A700C9DC20 /* SignUp */,
+				E9F69C371ABC477900C9DC20 /* ViewModel.h */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -351,6 +377,8 @@
 			children = (
 				E9F69C1A1ABC172000C9DC20 /* InboxViewController.h */,
 				E9F69C1B1ABC172000C9DC20 /* InboxViewController.m */,
+				390F06BE1ABF29DC00449329 /* InboxViewCell.h */,
+				390F06BF1ABF29DC00449329 /* InboxViewCell.m */,
 			);
 			name = Inbox;
 			sourceTree = "<group>";
@@ -539,15 +567,19 @@
 				E9F69C3F1ABC524A00C9DC20 /* ParseService.m in Sources */,
 				E9F69C231ABC172000C9DC20 /* ImageViewController.m in Sources */,
 				E9F69C4C1ABC75F200C9DC20 /* SignUpViewModel.m in Sources */,
+				390F06C01ABF29DC00449329 /* InboxViewCell.m in Sources */,
 				E9F69C261ABC172000C9DC20 /* SignUpViewController.m in Sources */,
 				E96DBBEF1A80CE5100E7D861 /* AppDelegate.m in Sources */,
 				E9F69C211ABC172000C9DC20 /* CameraViewController.m in Sources */,
 				E9F69C3B1ABC51B300C9DC20 /* ServiceLayer.m in Sources */,
 				E96DBBEC1A80CE5100E7D861 /* main.m in Sources */,
 				E9F69C201ABC172000C9DC20 /* AddFriendsViewController.m in Sources */,
+				390F06C31ABF2A6000449329 /* InboxCellViewModel.m in Sources */,
 				E9F69C241ABC172000C9DC20 /* InboxViewController.m in Sources */,
+				390F06C81ABF2F6C00449329 /* CETableViewBindingHelper.m in Sources */,
 				E9F69C351ABC433600C9DC20 /* LoginViewModel.m in Sources */,
 				E9F69C251ABC172000C9DC20 /* LoginViewController.m in Sources */,
+				391477CD1ABF17D000E3A24D /* InboxViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

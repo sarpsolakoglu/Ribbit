@@ -8,6 +8,7 @@
 #import "ViewModel.h"
 
 @protocol ViewController <NSObject>
+@required
 -(instancetype)initWithViewModel:(id<ViewModel>)viewModel;
 -(void)bindViewModel;
 @end

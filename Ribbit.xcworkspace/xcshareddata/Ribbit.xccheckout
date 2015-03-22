@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EFEC7249-708A-4E04-9564-646EE85C6CA4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ribbit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E57CDDEDF32B8960516A5717DE0BD16AAD1F476B</key>
+		<string>github.com:sarpsolakoglu/Ribbit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ribbit.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E57CDDEDF32B8960516A5717DE0BD16AAD1F476B</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:sarpsolakoglu/Ribbit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E57CDDEDF32B8960516A5717DE0BD16AAD1F476B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E57CDDEDF32B8960516A5717DE0BD16AAD1F476B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Ribbit</string>
+		</dict>
+	</array>
+</dict>
+</plist>

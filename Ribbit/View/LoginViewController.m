@@ -58,7 +58,7 @@
       deliverOn:[RACScheduler mainThreadScheduler]]
       subscribeNext:^(NSError *error) {
         NSString *errorString = [error userInfo][@"error"];
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"") message:errorString delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil];
         [alertView show];
     }];
     

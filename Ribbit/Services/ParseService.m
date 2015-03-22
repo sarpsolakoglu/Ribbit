@@ -52,4 +52,21 @@
     }];
 }
 
+-(RACSignal*)getInbox {
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
+        [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
+        [query orderByAscending:@"createdAt"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                [subscriber sendNext:objects];
+                [subscriber sendCompleted];
+            } else {
+                [subscriber sendError:error];
+            }
+        }];
+        
+        return nil;
+    }];
+}
 @end

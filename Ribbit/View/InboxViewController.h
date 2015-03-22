@@ -6,8 +6,10 @@
 //  Copyright (c) 2015 esoes. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+#import "ViewController.h"
 
-@interface InboxViewController : UITableViewController
-- (IBAction)logOut:(id)sender;
+
+@interface InboxViewController : UITableViewController <ViewController>
+- (IBAction)logOut:(id)sender; 
 @end
